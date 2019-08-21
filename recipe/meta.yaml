@@ -1,5 +1,5 @@
 {% set name = "Logbook" %}
-{% set version = "1.4.3" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
