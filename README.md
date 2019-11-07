@@ -7,7 +7,7 @@ Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Logbook is a nice logging replacement.
+Summary: Logbook is a nice logging replacement
 
 Logbook is a nice logging replacement.
 
