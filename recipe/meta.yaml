@@ -1,16 +1,17 @@
-{% set version = "1.7.0.post0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: logbook
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/L/Logbook/Logbook-{{ version }}.tar.gz
-  sha256: a5e8016701ca3beea6a390b0ba1541037f663543ca508ccd36cfdc841639cdd7
+  url: https://pypi.io/packages/source/L/Logbook/logbook-{{ version }}.tar.gz
+  sha256: 487fa41539787bfa21a51fabd7f3ae8ae7f9e6679bb3e241d0f5f18a2fc37e9c
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<39]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   build:
