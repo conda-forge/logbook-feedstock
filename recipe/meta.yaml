@@ -22,10 +22,11 @@ requirements:
   host:
     - python
     - setuptools
-    - cython
+    - setuptools-rust >=1.11.1
     - pip
   run:
     - python
+    - typing_extensions >=4.14.0
 
 test:
   imports:
