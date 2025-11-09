@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.9.1" %}
 
 package:
   name: logbook
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/L/Logbook/logbook-{{ version }}.tar.gz
-  sha256: 6d19797c1646ef2f518fe207ae88d2415487085044f5fa5f1cd725b9ab0dd329
+  sha256: 5f86371f7bd476ebcd52da989c020ab9f0fb90f106f38fc30f9788a3bf09c6ab
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -19,13 +19,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - {{ compiler('rust') }}
+    - cargo-bundle-licenses
   host:
     - python
     - setuptools
-    - cython
+    - setuptools-rust >=1.11.1
     - pip
   run:
     - python
+    - typing_extensions >=4.14.0
 
 test:
   imports:
