@@ -1,4 +1,4 @@
-{% set version = "1.10.0" %}
+{% set version = "1.10.1" %}
 
 package:
   name: logbook
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/L/Logbook/logbook-{{ version }}.tar.gz
-  sha256: 285d691508f34fe601058b121f217eba21d199d73f921a50358128ac90c0155e
+  sha256: 7fdf8d09d60c9eaa4d8d27b37363b4ce277d019f4cae5c259ea03040f7b634b7
 
 build:
   skip: true  # [py<39]
