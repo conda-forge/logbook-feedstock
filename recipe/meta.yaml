@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/L/Logbook/logbook-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/L/Logbook/logbook-{{ version }}.tar.gz
   sha256: 7fdf8d09d60c9eaa4d8d27b37363b4ce277d019f4cae5c259ea03040f7b634b7
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
